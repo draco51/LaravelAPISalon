@@ -21,7 +21,7 @@ class CreateGalleriesTable extends Migration
 
 
             $table->unsignedInteger('Fid');
-            $table->foreign('Fid')->references('freelancerId')->on('freelancer_profiles');
+            $table->foreign('Fid')->references('freelancerId')->on('freelancer_profiles')->onDelete('cascade');
         });
     }
 
