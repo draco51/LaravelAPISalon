@@ -21,6 +21,9 @@ Route::get('test/{testid}', function ($Id) {
     return response()->json(['testid' => "{$Id}"], 200);
 });
 
-Route::apiResource('/users', 'FreelancerProfileController');
-
-Route::get('users/{userId}', 'FreelancerProfileController@show');
+Route::apiResource('/stylists', 'FreelancerProfileController');
+//
+//Route::group(['prefix'=>'freelancers'],function(){
+//    Route::apiResource('/{freelancers}/freelancer', 'CalendarController');
+//
+//});
