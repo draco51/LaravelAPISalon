@@ -1,0 +1,31 @@
+
+send_timeout 300;
+server {
+    index index.html index.htm index.php;
+    server_name ${NGINX_SERVERNAME};
+    error_log  /var/log/nginx/error.log;
+    access_log /var/log/nginx/access.log;
+    root /var/www/public;
+
+    location / {
+            try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+            proxy_http_version 1.1;
+            proxy_set_header Connection "";
+            fastcgi_buffers 16 16k;
+            fastcgi_buffer_size 32k;
+            proxy_read_timeout 3600s;
+            try_files $uri =404;
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            fastcgi_pass php:9000;
+            fastcgi_index index.php;
+            fastcgi_read_timeout 300;
+            include fastcgi_params;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_param PATH_INFO $fastcgi_path_info;
+            fastcgi_param SERVER_NAME $host;
+            fastcgi_param SERVER_PORT 9008;
+    }
+}
