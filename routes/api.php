@@ -22,6 +22,7 @@ Route::get('test/{testid}', function ($Id) {
 });
 
 Route::apiResource('/stylists', 'FreelancerProfileController');
+
 //
 //Route::group(['prefix'=>'freelancers'],function(){
 //    Route::apiResource('/{freelancers}/freelancer', 'CalendarController');

@@ -23,7 +23,7 @@ class CreateBookingsTable extends Migration
             $table->smallInteger('tax'); // % value
 
             $table->unsignedInteger('Fid');
-            $table->foreign('Fid')->references('freelancerId')->on('freelancer_profiles');
+            $table->foreign('Fid')->references('id')->on('freelancer_profiles');
         });
     }
 

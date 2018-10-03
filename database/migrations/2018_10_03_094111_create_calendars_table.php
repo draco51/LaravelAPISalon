@@ -18,7 +18,7 @@ class CreateCalendarsTable extends Migration
             $table->boolean('dateStatus'); //booked or not
 
             $table->unsignedInteger('Fid');
-            $table->foreign('Fid')->references('freelancerId')->on('freelancer_profiles');
+            $table->foreign('Fid')->references('id')->on('freelancer_profiles');
         });
     }
 
