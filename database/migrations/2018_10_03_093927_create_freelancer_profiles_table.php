@@ -22,7 +22,7 @@ class CreateFreelancerProfilesTable extends Migration
             $table->string('profileTitle');
             $table->integer('rating');
 
-            $table->unsignedInteger('Uid');
+//            $table->unsignedInteger('Uid');
 //            $table->foreign('Uid')->references('userId')->on('users');
         });
     }
