@@ -20,14 +20,17 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::apiResource('/stylists', 'FreelancerProfileController');
 
 
-
-
-//Testing..
-Route::get('test/{testid}', function ($Id) {
-    return response()->json(['testid' => "{$Id}"], 200);
+Route::group(['prefix'=>'stylists'],function(){
+    Route::apiResource('/{stylist}/skills','SkillController');
 });
 
 
-//Route::group(['prefix'=>'stylists'],function(){
-//    Route::apiResource('/{stylist}/pages','FreelancerPageController');
-//});
+
+
+
+
+
+//////////Testing/////////////////////////////////////
+Route::get('test/{testid}', function ($Id) {
+    return response()->json(['testid' => "{$Id}"], 200);
+});

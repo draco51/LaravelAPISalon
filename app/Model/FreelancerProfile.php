@@ -2,7 +2,9 @@
 
 namespace App\Model;
 
+use App\Model\Skill;
 use Illuminate\Database\Eloquent\Model;
+
 
 class FreelancerProfile extends Model
 {

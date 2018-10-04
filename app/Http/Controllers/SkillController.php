@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\FreelancerProfile;
 use App\Model\Skill;
 use Illuminate\Http\Request;
 
@@ -12,9 +13,11 @@ class SkillController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($freelancerProfile)
     {
-        //
+
+        return $freelancerProfile->skills;
+
     }
 
     /**
