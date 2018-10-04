@@ -16,8 +16,9 @@ class SkillController extends Controller
     public function index(FreelancerProfile $freelancerProfile)
     {
 
-        return $freelancerProfile->skills;
-//        return FreelancerProfile::where("id", "=",$freelancerProfile)->with('skills')->get();
+//        return $freelancerProfile->skills;
+//        return FreelancerProfile::find($freelancerProfile)->skills;
+        return FreelancerProfile::with('skills')->get();
 
 
 
