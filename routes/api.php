@@ -17,14 +17,17 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::apiResource('/stylists', 'FreelancerProfileController');
+
+
+
+
+//Testing..
 Route::get('test/{testid}', function ($Id) {
     return response()->json(['testid' => "{$Id}"], 200);
 });
 
-Route::apiResource('/stylists', 'FreelancerProfileController');
 
-//
-//Route::group(['prefix'=>'freelancers'],function(){
-//    Route::apiResource('/{freelancers}/freelancer', 'CalendarController');
-//
+//Route::group(['prefix'=>'stylists'],function(){
+//    Route::apiResource('/{stylist}/pages','FreelancerPageController');
 //});

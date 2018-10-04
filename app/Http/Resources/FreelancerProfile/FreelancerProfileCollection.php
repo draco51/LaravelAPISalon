@@ -2,9 +2,9 @@
 
 namespace App\Http\Resources\FreelancerProfile;
 
-use Illuminate\Http\Resources\Json\ResourceCollection;
+use Illuminate\Http\Resources\Json\Resource;
 
-class FreelancerProfileCollection extends ResourceCollection
+class FreelancerProfileCollection extends Resource
 {
     /**
      * Transform the resource collection into an array.
@@ -14,6 +14,15 @@ class FreelancerProfileCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return[
+            'name' => $this->name,
+            'location' => $this->location,
+            'hourRate' => $this->hourRate,
+            'rating' => $this->rating,
+            'href' => [
+                'link' => route('stylists.show', $this->id)
+            ]
+
+        ];
     }
 }

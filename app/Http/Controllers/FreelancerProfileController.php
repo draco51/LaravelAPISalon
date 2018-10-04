@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\FreelancerProfile\FreelancerProfileCollection;
 use App\Http\Resources\FreelancerProfile\FreelancerProfileResource;
 use App\Model\FreelancerProfile;
 use Illuminate\Http\Request;
@@ -15,7 +16,8 @@ class FreelancerProfileController extends Controller
      */
     public function index()
     {
-        return FreelancerProfile::all();
+//      return FreelancerProfile::all();
+        return FreelancerProfileCollection::collection(FreelancerProfile::all());
     }
 
     /**
@@ -48,11 +50,15 @@ class FreelancerProfileController extends Controller
 
 
 
-    public function show(FreelancerProfile $freelancerProfile)
+    public function show($freelancerProfile)
     {
-//        return new FreelancerProfileResource($freelancerProfile);
-        $freelancerProfile = FreelancerProfile::find($freelancerProfile);
-        dd($freelancerProfile);
+        $result=FreelancerProfile::find($freelancerProfile);
+
+        return new FreelancerProfileResource($result);
+
+
+//        $freelancerProfile = FreelancerProfile::find($freelancerProfile);
+//        return dd($freelancerProfile);
     }
 
     public function edit(FreelancerProfile $freelancerProfile)

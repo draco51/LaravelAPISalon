@@ -13,9 +13,8 @@ class FreelancerProfileResource extends Resource
             'location' => $this->location,
             'description' => $this->description,
             'hourRate' => $this->hourRate,
-            'profileTitle' => $this->profileT,
-            'rating' => $this->rating,
+            'profileTitle' => $this->profileTitle,
+            'rating' => $this->rating
         ];
-
     }
 }
