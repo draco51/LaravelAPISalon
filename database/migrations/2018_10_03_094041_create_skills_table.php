@@ -14,11 +14,12 @@ class CreateSkillsTable extends Migration
     public function up()
     {
         Schema::create('skills', function (Blueprint $table) {
-            $table->increments('skillId');
+            $table->increments('id');
             $table->string('skill');
+            $table->timestamps();
 
-            $table->unsignedInteger('Fid');
-            $table->foreign('Fid')->references('freelancerId')->on('freelancer_profiles')->onDelete('cascade');
+            $table->unsignedInteger('Fid')->index();
+            $table->foreign('Fid')->references('id')->on('freelancer_profiles')->onDelete('cascade');
         });
     }
 

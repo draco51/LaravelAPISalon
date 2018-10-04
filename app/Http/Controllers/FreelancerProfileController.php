@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\FreelancerProfile\FreelancerProfileResource;
 use App\Model\FreelancerProfile;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class FreelancerProfileController extends Controller
      */
     public function index()
     {
-        //
+        return FreelancerProfile::all();
     }
 
     /**
@@ -44,17 +45,16 @@ class FreelancerProfileController extends Controller
      * @param  \App\Model\FreelancerProfile  $freelancerProfile
      * @return \Illuminate\Http\Response
      */
+
+
+
     public function show(FreelancerProfile $freelancerProfile)
     {
-        //
+//        return new FreelancerProfileResource($freelancerProfile);
+        $freelancerProfile = FreelancerProfile::find($freelancerProfile);
+        dd($freelancerProfile);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Model\FreelancerProfile  $freelancerProfile
-     * @return \Illuminate\Http\Response
-     */
     public function edit(FreelancerProfile $freelancerProfile)
     {
         //

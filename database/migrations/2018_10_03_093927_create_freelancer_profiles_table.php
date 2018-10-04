@@ -14,13 +14,14 @@ class CreateFreelancerProfilesTable extends Migration
     public function up()
     {
         Schema::create('freelancer_profiles', function (Blueprint $table) {
-            $table->increments('freelancerId');
+            $table->increments('id');
             $table->string('name');
             $table->string('location');
             $table->bigInteger('hourRate');
             $table->text('description');
             $table->string('profileTitle');
             $table->integer('rating');
+            $table->timestamps();
 
 //            $table->unsignedInteger('Uid');
 //            $table->foreign('Uid')->references('userId')->on('users');
