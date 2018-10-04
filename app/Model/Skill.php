@@ -9,6 +9,6 @@ class Skill extends Model
 {
     public function freelancerProfile()
     {
-        return $this->belongsTo(FreelancerProfile::class);
+        return $this->belongsTo(FreelancerProfile::class,'Fid');
     }
 }

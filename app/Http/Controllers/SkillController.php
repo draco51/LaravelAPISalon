@@ -13,10 +13,13 @@ class SkillController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($freelancerProfile)
+    public function index(FreelancerProfile $freelancerProfile)
     {
 
         return $freelancerProfile->skills;
+//        return FreelancerProfile::where("id", "=",$freelancerProfile)->with('skills')->get();
+
+
 
     }
 
