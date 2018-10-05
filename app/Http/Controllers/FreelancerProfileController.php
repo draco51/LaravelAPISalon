@@ -53,8 +53,10 @@ class FreelancerProfileController extends Controller
     public function show($freelancerProfile)
     {
         $result=FreelancerProfile::find($freelancerProfile);
+//        return FreelancerProfile::with('skills')->get();
 
         return new FreelancerProfileResource($result);
+//        return $result;
 
 
 //        $freelancerProfile = FreelancerProfile::find($freelancerProfile);

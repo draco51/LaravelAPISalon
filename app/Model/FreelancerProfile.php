@@ -12,4 +12,9 @@ class FreelancerProfile extends Model
     {
         return $this->hasMany(Skill::class,'Fid');
     }
+
+    public function calendar()
+    {
+        return $this->hasMany(Calendar::class,'Fid');
+    }
 }
