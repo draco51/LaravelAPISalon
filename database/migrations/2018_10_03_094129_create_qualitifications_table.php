@@ -14,7 +14,7 @@ class CreateQualitificationsTable extends Migration
     public function up()
     {
         Schema::create('qualitifications', function (Blueprint $table) {
-            $table->increments('qualificationId');
+            $table->increments('id');
             $table->string('qualification');
 
             $table->unsignedInteger('Fid');
