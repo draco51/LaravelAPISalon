@@ -17,6 +17,7 @@ class FreelancerProfileController extends Controller
     public function index()
     {
 //      return FreelancerProfile::all();
+        FreelancerProfileCollection::withoutWrapping();
         return FreelancerProfileCollection::collection(FreelancerProfile::all());
     }
 
