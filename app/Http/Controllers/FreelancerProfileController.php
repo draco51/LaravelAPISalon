@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Resources\FreelancerProfile\FreelancerProfileCollection;
 use App\Http\Resources\FreelancerProfile\FreelancerProfileResource;
@@ -51,14 +52,31 @@ class FreelancerProfileController extends Controller
 
 
 
-    public function show($freelancerProfile)
+    public function show( $freelancerProfile)
     {
-        $result=FreelancerProfile::find($freelancerProfile);
+//        $testData = DB::table('freelancer_profiles')
+//            ->where('id', $freelancerProfile)
+//            ->join('skills', 'freelancer_profiles.id', '=', 'skills.Fid')
+//            ->select('freelancer_profiles.*', 'skills.skill')
+//            ->get();
+
+///////////////////////////////////////////////////////////////
+        $testData = DB::table('freelancer_profiles')
+            ->select('*')
+            ->join('skills', 'skills.Fid', '=', 'freelancer_profiles.id')
+            ->where('freelancer_profiles.id', $freelancerProfile)
+            ->get();
+        return $testData;
+//////////////////////////////////////////////////////////////
+
+
+//        $result=FreelancerProfile::find($freelancerProfile);
+//        FreelancerProfileResource::withoutWrapping();
+//        return new FreelancerProfileResource($result);
+
+
 //        return FreelancerProfile::with('skills')->get();
 //        FreelancerProfileResource::withoutWrapping();
-        return new FreelancerProfileResource($result);
-
-
 //        $freelancerProfile = FreelancerProfile::find($freelancerProfile);
 //        return dd($freelancerProfile);
     }

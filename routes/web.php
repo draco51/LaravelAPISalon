@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Route::get('/customers',function(){
     $faker = Faker\Factory::create();
 

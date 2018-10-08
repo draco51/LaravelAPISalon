@@ -21,6 +21,7 @@ class CreateFreelancerProfilesTable extends Migration
             $table->text('description');
             $table->string('profileTitle');
             $table->integer('rating');
+            $table->string('propicURL');
             $table->timestamps();
 
 //            $table->unsignedInteger('Uid');

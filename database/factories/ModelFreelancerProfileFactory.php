@@ -9,6 +9,7 @@ $factory->define(App\Model\FreelancerProfile::class, function (Faker $faker) {
         'hourRate' => $faker->numberBetween($min = 10, $max = 1000),
         'description' => $faker->paragraph,
         'profileTitle' => $faker->domainWord,
-        'rating' => $faker->numberBetween($min = 1, $max = 5)
+        'rating' => $faker->numberBetween($min = 1, $max = 5),
+        'propicURL' => $faker->name
     ];
 });
