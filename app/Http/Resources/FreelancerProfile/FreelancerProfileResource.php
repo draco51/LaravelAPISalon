@@ -2,6 +2,8 @@
 
 namespace App\Http\Resources\FreelancerProfile;
 
+use App\Http\Resources\SkillResource;
+use App\Model\Skill;
 use Illuminate\Http\Resources\Json\Resource;
 
 class FreelancerProfileResource extends Resource
@@ -15,9 +17,8 @@ class FreelancerProfileResource extends Resource
             'hourRate' => $this->hourRate,
             'profileTitle' => $this->profileTitle,
             'rating' => $this->rating,
-//            'Skills' => [
-//                'skills' => new FreelancerProfileCollection($this->skills),
-//            ]
+//            'Skills' => Skill::collection($this->skills),
+
         ];
     }
 
