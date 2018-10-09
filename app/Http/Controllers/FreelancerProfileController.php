@@ -54,6 +54,12 @@ class FreelancerProfileController extends Controller
 
     public function show( $freelancerProfile)
     {
+
+        $result = FreelancerProfile::with('skills','qualitifications')->find($freelancerProfile);
+//        return ($result);
+        FreelancerProfileResource::withoutWrapping();
+        return new FreelancerProfileResource($result);
+
 //        $testData = DB::table('freelancer_profiles')
 //            ->where('id', $freelancerProfile)
 //            ->join('skills', 'freelancer_profiles.id', '=', 'skills.Fid')
@@ -70,12 +76,11 @@ class FreelancerProfileController extends Controller
 //////////////////////////////////////////////////////////////
 
 
-        $result=FreelancerProfile::find($freelancerProfile);
-        FreelancerProfileResource::withoutWrapping();
-        return new FreelancerProfileResource($result);
+//        $result=FreelancerProfile::find($freelancerProfile);
+//        FreelancerProfileResource::withoutWrapping();
+//        return new FreelancerProfileResource($result);
 
 
-//        return FreelancerProfile::with('skills')->get();
 //        FreelancerProfileResource::withoutWrapping();
 //        $freelancerProfile = FreelancerProfile::find($freelancerProfile);
 //        return dd($freelancerProfile);
