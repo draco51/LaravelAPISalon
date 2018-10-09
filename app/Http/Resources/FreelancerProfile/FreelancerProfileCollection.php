@@ -21,11 +21,10 @@ class FreelancerProfileCollection extends Resource
             'rating' => $this->rating,
             'profileTitle' => $this->profileTitle,
             'description' => $this->description,
-            'propicURL' => $this->propicURL
-
-//            'href' => [
-//                'link' => route('stylists.show', $this->id)
-//            ]
+            'propicURL' => $this->propicURL,
+            'href' => [
+                'link' => route('stylists.show', $this->id)
+            ]
 
         ];
     }
