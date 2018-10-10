@@ -20,7 +20,8 @@ class FreelancerProfileResource extends Resource
             'rating' => $this->rating,
             'propicURL' => $this->propicURL,
             'skills' => $this->skills,
-            'qualitifications' => $this->qualitifications
+            'qualitifications' => $this->qualitifications,
+            'pictures' => $this->gallery
 
         ];
     }

@@ -16,8 +16,9 @@ class CreateQualitificationsTable extends Migration
         Schema::create('qualitifications', function (Blueprint $table) {
             $table->increments('id');
             $table->string('qualification');
+            $table->timestamps();
 
-            $table->unsignedInteger('Fid');
+            $table->unsignedInteger('Fid')->index();;
             $table->foreign('Fid')->references('id')->on('freelancer_profiles')->onDelete('cascade');
         });
     }

@@ -18,6 +18,7 @@ class CreateGalleriesTable extends Migration
             $table->increments('id');
             $table->string('imageURL');
             $table->text('description');
+            $table->timestamps();
 
 
             $table->unsignedInteger('Fid');

@@ -21,6 +21,7 @@ class CreateBookingsTable extends Migration
             $table->boolean('bookingStatus'); // Freelancer confirmed or not
             $table->integer('totalCost');
             $table->smallInteger('tax'); // % value
+            $table->timestamps();
 
             $table->unsignedInteger('Fid');
             $table->foreign('Fid')->references('id')->on('freelancer_profiles');
