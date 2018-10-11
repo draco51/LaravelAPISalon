@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         factory(App\Model\Skill::class,20)->create();
         factory(App\Model\Qualitification::class,25)->create();
         factory(App\Model\Calendar::class,300)->create();
+        factory(App\Model\Gallery::class,50)->create();
     }
 }

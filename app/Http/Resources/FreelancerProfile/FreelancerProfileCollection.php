@@ -22,6 +22,7 @@ class FreelancerProfileCollection extends Resource
             'profileTitle' => $this->profileTitle,
             'description' => $this->description,
             'propicURL' => $this->propicURL,
+            'hourRate' => $this->hourRate,
             'href' => [
                 'link' => route('stylists.show', $this->id)
             ]
