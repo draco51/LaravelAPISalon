@@ -59,31 +59,6 @@ class FreelancerProfileController extends Controller
 //        return ($result);
         FreelancerProfileResource::withoutWrapping();
         return new FreelancerProfileResource($result);
-
-//        $testData = DB::table('freelancer_profiles')
-//            ->where('id', $freelancerProfile)
-//            ->join('skills', 'freelancer_profiles.id', '=', 'skills.Fid')
-//            ->select('freelancer_profiles.*', 'skills.skill')
-//            ->get();
-
-///////////////////////////////////////////////////////////////
-//        $testData = DB::table('freelancer_profiles')
-//            ->select('*')
-//            ->join('skills', 'skills.Fid', '=', 'freelancer_profiles.id')
-//            ->where('freelancer_profiles.id', $freelancerProfile)
-//            ->get();
-//        return $testData;
-//////////////////////////////////////////////////////////////
-
-
-//        $result=FreelancerProfile::find($freelancerProfile);
-//        FreelancerProfileResource::withoutWrapping();
-//        return new FreelancerProfileResource($result);
-
-
-//        FreelancerProfileResource::withoutWrapping();
-//        $freelancerProfile = FreelancerProfile::find($freelancerProfile);
-//        return dd($freelancerProfile);
     }
 
     public function edit(FreelancerProfile $freelancerProfile)

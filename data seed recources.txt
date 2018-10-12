@@ -10,15 +10,71 @@ https://randomuser.me/api/portraits/women/76.jpg
 https://randomuser.me/api/portraits/women/9.jpg
 
 
-  // componentDidMount() {
-  //   const encodedValue = encodeURIComponent(this.props.match.params.id);
-  //   fetch(`http://127.0.0.1:9008/api/stylists/${encodedValue}`)
-  //     .then(results => {
-  //       return results.json();
-  //     })
-  //     .then(data => {
-  //       let pictures = data.results.map(pic => {
-  //         return <p key={pic.id}>s</p>;
-  //       });
-  //     });
-  // }
+Profile titles
+Hair Stylist (Freelance)
+Fashion Stylist (Freelance/On Call)
+Hair Dresser/Stylist/Barber makeup artist
+Hair Stylist Assistant
+Freelancer Stylist 
+Hair Stylist Assistant Traineer
+Hair Stylist Assistant
+Fashion Stylist (Freelance/On Call)
+Hair Coloring Specialist
+Hair conditioning specialist
+
+
+Skills
+
+Hair Coloring
+Conditioning
+Hair Curling
+Eyebrow Waxing
+Hair Bleaching
+Hair Cutting
+Hair Extensions
+Hair Shaping
+Hair Styling
+Hair Shaping
+Hair Relaxing
+Hair Extensions
+Blow Dry
+Hair Polish
+Hair Lightening
+Hair Glaze
+
+Qualifications
+
+Certificate in Hairdressing (ICI)
+Certificate II in Hairdressing (ICI)
+Certificate III in Hairdressing (ICI)
+Advanced Certificate in Hairdressing
+Apprenticeship in Hairdressing
+Higher National Certificate (HNC)
+NVQ 2 in Hairdressing
+NVQ 3 in Hairdressing
+NVQ 4 in Hairdressing
+
+Gallery
+
+http://1.bp.blogspot.com/-us2T9cVKeUg/Vl4DNI_3IzI/AAAAAAAAljM/YbHB55YRfhg/s1600/icon.jpg
+https://1.bp.blogspot.com/-EzMnh33PqpE/WB2icmnvSGI/AAAAAAABOT0/f8emJwiNNmwjTGPlKocFjKjWh-smoqDrACK4B/s1600/icon.jpg
+https://www.keratincomplex.com/media/wysiwyg/Blog92-CeliaCuts.jpg
+https://onychairreviews.files.wordpress.com/2015/05/1.png
+https://www.kamhairandbodyspa.co.uk/files/2013/11/brazilian-blow-dry-2.jpg
+https://theawesomedaily.com/wp-content/uploads/2015/11/elite-daily-hair-600x300.jpg
+http://beautyandcaretips.com/wp-content/uploads/2018/08/Blonde-Hair-Color.jpg
+https://i.pinimg.com/originals/d6/eb/86/d6eb865d37a344a9fd0af178abe7ac81.jpg
+https://1.bp.blogspot.com/-2D6vSF9F4B4/VjOnmufQ4sI/AAAAAAAAgUE/LK2q8e9QDNQ/s1600/icon.jpg
+http://unisexsaloninjanakpuri.com/wp-content/uploads/2018/08/hair-cut-1-600x300.jpg
+https://cdn.shopify.com/s/files/1/0434/4749/files/Textured_Crop_Haircut_grande.jpg?v=1487851570
+http://menshaircutstyle.com/wp-content/uploads/celebrities-with-3-day-beard.jpg
+http://www.youlikeonline.com/wp-content/uploads/2017/10/232.jpg
+http://1.bp.blogspot.com/-rOtUy_UUYa8/V1FnDejY5CI/AAAAAAABGyo/9YG4TzvJfIgY8rseS8DSLaN9kwSi-NOdwCK4B/s1600/icon_template.jpg
+http://bentalasalon.com/wp-content/uploads/2018/09/short-layered-haircut-for-men-1.jpg
+https://i.pinimg.com/originals/cf/e0/9a/cfe09aab28a6c8294477f3f8bf7336c0.jpg
+http://www.salon-la-mari.co.za/photos/001.jpg
+https://www.lifestylesalons.com/wp-content/uploads/2014/08/Tangerine-collage-1.jpg
+http://sazworld.com/wp-content/uploads/2016/06/Hair-Color-and-Shades.jpg
+https://pbs.twimg.com/media/DOlPCzwWAAAgxDX.jpg
+http://2.bp.blogspot.com/-PT5ZEZLciEQ/VRHMZXx0wBI/AAAAAAAACzA/iJFjGFcV1pk/s1600/icon.jpg
+

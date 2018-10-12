@@ -23,9 +23,6 @@ class CreateFreelancerProfilesTable extends Migration
             $table->integer('rating');
             $table->string('propicURL');
             $table->timestamps();
-
-//            $table->unsignedInteger('Uid');
-//            $table->foreign('Uid')->references('userId')->on('users');
         });
     }
 

@@ -15,7 +15,7 @@ class CreateCalendarsTable extends Migration
     {
         Schema::create('calendars', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('dateStatus'); //booked or not
+            $table->boolean('dateStatus'); //Available or NOT
             $table->timestamps();
 
             $table->unsignedInteger('Fid');
