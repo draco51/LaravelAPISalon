@@ -88,4 +88,12 @@ class FreelancerProfileController extends Controller
     {
         //
     }
+
+    public function search($location,$rating,$rate)
+    {
+        $result = DB::table('freelancer_profiles')->where('location', $location)->where('hourRate' ,'>' ,$rate)->get();
+
+
+        return response()->json($result);
+    }
 }

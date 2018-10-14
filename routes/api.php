@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 use Illuminate\Http\Request;
 
@@ -27,10 +27,14 @@ Route::group(['prefix'=>'stylists'],function(){
 
 
 
-
+Route::get('/foo', function () {
+    return 'Hello World';
+});
 
 
 //////////Testing/////////////////////////////////////
-Route::get('test/{testid}', function ($Id) {
-    return response()->json(['testid' => "{$Id}"], 200);
+Route::get('/test/{testid}', function ($testid) {
+    return 'sdasdas';
 });
+
+
