@@ -97,6 +97,11 @@ class FreelancerProfileController extends Controller
         $rating = Input::get('rating');
         $minPrice = Input::get('minPrice');
         $maxPrice = Input::get('maxPrice');
+        $skill1 = Input::get('s1');
+        $skill2 = Input::get('s2');
+        $skill3 = Input::get('s3');
+        $skill4 = Input::get('s4');
+        $skill5 = Input::get('s5');
 
         $query = DB::table('freelancer_profiles');
 
@@ -114,6 +119,19 @@ class FreelancerProfileController extends Controller
 
         if ($rating==3)
             $query->where('rating','>', $rating);
+
+        // if ($skill1=='')
+        //     $query->where('rating', $skill1);
+        // if ($skill2==3)
+        //     $query->where('rating', $skill2);
+        // if ($skill3==3)
+        //     $query->where('rating', $skill3);
+        // if ($skill4==3)
+        //     $query->where('rating', $skill4);
+        // if ($skill5==3)
+        //     $query->where('rating', $skill5);
+
+
 
 
         $result = $query->get();
