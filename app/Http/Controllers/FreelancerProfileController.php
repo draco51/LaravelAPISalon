@@ -100,42 +100,29 @@ class FreelancerProfileController extends Controller
         $skills = Input::get('s');
         // dd($skills);
         
-        // $skill1 = Input::get('s1');
-        // $skill2 = Input::get('s2');
-        // $skill3 = Input::get('s3');
-        // $skill4 = Input::get('s4');
-        // $skill5 = Input::get('s5');
 
-        $query = DB::table('freelancer_profiles');
+        $query = DB::table('freelancer_profiles')->join('skills', 'skills.Fid', '=', 'freelancer_profiles.id')->select('freelancer_profiles.*');
 
         if (isset($location))
-            $query->where('location', $location);
+            $query->where('freelancer_profiles.location', $location);
 
         if (isset($minPrice))
-            $query->where('hourRate','>', $minPrice);
+            $query->where('freelancer_profiles.hourRate','>', $minPrice);
 
         if (isset($maxPrice))
-            $query->where('hourRate','<', $maxPrice);
+            $query->where('freelancer_profiles.hourRate','<', $maxPrice);
 
         if ($rating==5)
-            $query->where('rating', $rating);
+            $query->where('freelancer_profiles.rating', $rating);
 
         if ($rating==3)
-            $query->where('rating','>', $rating);
+            $query->where('freelancer_profiles.rating','>', $rating);
 
-        // if ($skill1=='')
-        //     $query->where('rating', $skill1);
-        // if ($skill2==3)
-        //     $query->where('rating', $skill2);
-        // if ($skill3==3)
-        //     $query->where('rating', $skill3);
-        // if ($skill4==3)
-        //     $query->where('rating', $skill4);
-        // if ($skill5==3)
-        //     $query->where('rating', $skill5);
-
-
-
+        foreach ($skills as $skill ) {
+            if ($skill != 'undefined'){
+                $query->where('skills.skill',$skill);
+            }
+        }
 
         $result = $query->get();
         return response()->json($result);
