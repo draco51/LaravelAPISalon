@@ -7,6 +7,7 @@ use App\Http\Resources\FreelancerProfile\FreelancerProfileCollection;
 use App\Http\Resources\FreelancerProfile\FreelancerProfileResource;
 use App\Model\FreelancerProfile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class FreelancerProfileController extends Controller
 {
@@ -89,11 +90,34 @@ class FreelancerProfileController extends Controller
         //
     }
 
-    public function search($location,$rating,$rate)
-    {
-        $result = DB::table('freelancer_profiles')->where('location', $location)->where('hourRate' ,'>' ,$rate)->get();
+    public function search()
+    {   
+        
+        $location = Input::get('location');
+        $rating = Input::get('rating');
+        $minPrice = Input::get('minPrice');
+        $maxPrice = Input::get('maxPrice');
+
+        $query = DB::table('freelancer_profiles');
+
+        if (isset($location))
+            $query->where('location', $location);
+
+        if (isset($minPrice))
+            $query->where('hourRate','>', $minPrice);
+
+        if (isset($maxPrice))
+            $query->where('hourRate','<', $maxPrice);
+
+        if ($rating==5)
+            $query->where('rating', $rating);
+
+        if ($rating==3)
+            $query->where('rating','>', $rating);
 
 
+        $result = $query->get();
         return response()->json($result);
     }
 }
+

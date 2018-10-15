@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/search/{location}/{rating}/{rate}', 'FreelancerProfileController@search');
+Route::get('/search', 'FreelancerProfileController@search');
 
 
 Route::get('/customers',function(){
