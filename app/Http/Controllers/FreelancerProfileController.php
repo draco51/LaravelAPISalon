@@ -97,11 +97,14 @@ class FreelancerProfileController extends Controller
         $rating = Input::get('rating');
         $minPrice = Input::get('minPrice');
         $maxPrice = Input::get('maxPrice');
-        $skill1 = Input::get('s1');
-        $skill2 = Input::get('s2');
-        $skill3 = Input::get('s3');
-        $skill4 = Input::get('s4');
-        $skill5 = Input::get('s5');
+        $skills = Input::get('s');
+        // dd($skills);
+        
+        // $skill1 = Input::get('s1');
+        // $skill2 = Input::get('s2');
+        // $skill3 = Input::get('s3');
+        // $skill4 = Input::get('s4');
+        // $skill5 = Input::get('s5');
 
         $query = DB::table('freelancer_profiles');
 
