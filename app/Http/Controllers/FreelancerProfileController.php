@@ -118,13 +118,13 @@ class FreelancerProfileController extends Controller
         if ($rating==3)
             $query->where('freelancer_profiles.rating','>', $rating);
 
-        foreach ($skills as $skill ) {
-            if ($skill != 'undefined'){
-                $query->where('skills.skill',$skill);
-            }
-        }
+        // foreach ($skills as $skill ) {
+        //     if ($skill != 'undefined'){
+        //         $query->where('skills.skill',$skill);
+        //     }
+        // }
 
-        $result = $query->get();
+        $result = $query->get()->unique('id')->all();
         return response()->json($result);
     }
 }
