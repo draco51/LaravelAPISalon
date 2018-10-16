@@ -90,6 +90,17 @@ class FreelancerProfileController extends Controller
         //
     }
 
+    public function resourceData()
+    {
+        $name = Input::get('name');
+        $title = Input::get('title');
+        $description = Input::get('description');
+        $imageURL = Input::get('imageURL');
+
+        $query = DB::table('testimonies')->get();
+        return response()->json($query);
+    }
+
     public function search()
     {   
         

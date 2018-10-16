@@ -26,21 +26,21 @@ Hair conditioning specialist
 Skills
 
 Hair Coloring
-Conditioning
-Hair Curling
-Eyebrow Waxing
+Hair Conditioning
 Hair Bleaching
-Hair Cutting
+Hair Coloring
+Hair Coloring
+Hair Extensions
+Hair Coloring
+Hair Coloring
+Hair Shaping
+Hair Bleaching
 Hair Extensions
 Hair Shaping
-Hair Styling
+Hair Conditioning
+Hair Coloring
 Hair Shaping
-Hair Relaxing
-Hair Extensions
-Blow Dry
-Hair Polish
-Hair Lightening
-Hair Glaze
+Hair Conditioning
 
 Qualifications
 
@@ -78,3 +78,8 @@ http://sazworld.com/wp-content/uploads/2016/06/Hair-Color-and-Shades.jpg
 https://pbs.twimg.com/media/DOlPCzwWAAAgxDX.jpg
 http://2.bp.blogspot.com/-PT5ZEZLciEQ/VRHMZXx0wBI/AAAAAAAACzA/iJFjGFcV1pk/s1600/icon.jpg
 
+
+testimonies
+1	Dayne 	Fewer mixups means more clients in our chairs!	"We love ColorMe here at Salon A! The online booking feature and text confirmation makes scheduling a pleasure!! Our clients LOVE it!!"	https://randomuser.me/api/portraits/men/8.jpg	2018-08-29 17:49:25	2018-10-16 17:49:31	1
+2	Addie 	Fewer mixups means more clients in our chairs!	"It has helped me run my business efficiently, and my clients love how easy it is to book online!"	https://randomuser.me/api/portraits/women/76.jpg	2018-09-26 17:49:48	2018-10-16 17:49:50	3
+3	Meah Tweh	Meah Tweh	"It has helped me to run my business efficiently, and find perfect freelancers online	https://www.setmore.com/landing-page/spa/images/Michelle-church@1x.png	2018-10-03 18:30:45	2018-10-16 18:30:48	3

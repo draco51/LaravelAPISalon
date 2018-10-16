@@ -24,6 +24,8 @@ Route::get('/', function () {
 
 
 Route::get('/search', 'FreelancerProfileController@search');
+Route::get('/resource/testimonies', 'FreelancerProfileController@resourceData');
+
 
 
 Route::get('/customers',function(){
