@@ -100,8 +100,10 @@ class FreelancerProfileController extends Controller
         $skills = Input::get('s');
         // dd($skills);
         
-
+        //Join freelancer_profiles with other tables
         $query = DB::table('freelancer_profiles')->join('skills', 'skills.Fid', '=', 'freelancer_profiles.id')->select('freelancer_profiles.*');
+
+        // Conditional query depending on string URI
 
         if (isset($location))
             $query->where('freelancer_profiles.location', $location);
@@ -118,13 +120,14 @@ class FreelancerProfileController extends Controller
         if ($rating==3)
             $query->where('freelancer_profiles.rating','>', $rating);
 
-        // foreach ($skills as $skill ) {
-        //     if ($skill != 'undefined'){
-        //         $query->where('skills.skill',$skill);
-        //     }
-        // }
+        //Search skills array in skill table
+        foreach ($skills as $skill ) {
+            if ($skill != 'undefined'){
+                $query->where('skills.skill',$skill);
+            }
+        }
 
-        $result = $query->get()->unique('id')->all();
+        $result = $query->distinct()->get();
         return response()->json($result);
     }
 }
