@@ -32,9 +32,9 @@ Route::get('/foo', function () {
 });
 
 
-//////////Testing/////////////////////////////////////
-Route::get('/test/{testid}', function ($testid) {
-    return 'sdasdas';
-});
+///////////////Testing////////////////////////////
+//Route::get('/test/{testid}', function ($testid) {
+//    return 'sdasdas';
+//});
 
 
