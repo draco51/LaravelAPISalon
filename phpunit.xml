@@ -11,7 +11,7 @@
     <testsuites>
         <testsuite name="Feature">
             <directory suffix="Test.php">./tests/Feature</directory>
-        </testsuite>
+        </testsuite>☺
 
         <testsuite name="Unit">
             <directory suffix="Test.php">./tests/Unit</directory>
@@ -27,5 +27,6 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <!--<env name="DB_CONNECTION" value="mysql"/>-->
     </php>
 </phpunit>
