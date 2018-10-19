@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use App\Model\FreelancerProfile;
 use App\Model\Skill;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -13,25 +14,33 @@ class DatabaseTest extends TestCase
 {
 
     use DatabaseTransactions;
+
+    private $user;
+    public function setUp()
+    {
+        parent::setUp();
+        $this->user = factory(FreelancerProfile::class)->create();
+    }
     /**
      * A basic test example.
      *
      * @return void
      */
     /** @test */
-    public function Example()
+    public function expecting_input_user_count()
     {
-        $first = factory(Skill::class,10)->create();
-        $skill = Skill::orderBy('created_at', 'desc')->first();
-        $this->assertEquals('10',$first);
+        $this->assertNotEmpty($this->user->id);
+    }
 
-
-//        $this->assertEquals([
-//            ["id" => $skill->id->format('int'),
-//                "skill" => $skill->created_at->format('Y-M-D')
-//
-//            ]
-//        ])
+    /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    /** @test */
+    public function freelacner_has_name()
+    {
+        $this->assertNotEmpty($this->user->name);
     }
 
 }
