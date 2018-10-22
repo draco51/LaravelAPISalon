@@ -27,14 +27,7 @@ Route::group(['prefix'=>'stylists'],function(){
 
 
 
-Route::get('/foo', function () {
-    return 'Hello World';
-});
 
 
-///////////////Testing////////////////////////////
-//Route::get('/test/{testid}', function ($testid) {
-//    return 'sdasdas';
-//});
 
 

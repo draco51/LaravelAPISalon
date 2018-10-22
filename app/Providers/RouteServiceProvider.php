@@ -54,6 +54,10 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web','cors')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
+
+//        Route::middleware('web','cors')
+//            ->namespace($this->namespace)
+//            ->group(base_path('routes/web.php'));
     }
 
     /**
@@ -65,21 +69,18 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes()
     {
-        // Route::prefix('api')
-        //      ->middleware('api','cors')
-        //      ->namespace($this->namespace)
-        //      ->group(base_path('routes/api.php'));
-
-         Route::group([
+//         Route::prefix('api')
+//              ->middleware('api','cors')
+//              ->namespace($this->namespace)
+//              ->group(base_path('routes/api.php'));
+//
+        Route::group([
         'middleware' => ['api', 'cors'],
         'namespace' => $this->namespace,
         'prefix' => 'api',
     ], function ($router) {
          //Add you routes here, for example:
          Route::apiResource('/stylists','FreelancerProfileController');
-         Route::get('/foo', function () {
-                 return 'Hello World';
-             });
 
     });
         

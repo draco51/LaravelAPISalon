@@ -5,6 +5,7 @@ namespace Tests\Unit;
 use App\Model\FreelancerProfile;
 use App\Model\Skill;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use PhpParser\Builder\Property;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -15,32 +16,31 @@ class DatabaseTest extends TestCase
 
     use DatabaseTransactions;
 
-    private $user;
+    private $users;
     public function setUp()
     {
         parent::setUp();
-        $this->user = factory(FreelancerProfile::class)->create();
+        $this->users = factory(FreelancerProfile::class)->create();
     }
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
+
     /** @test */
     public function expecting_input_user_count()
     {
-        $this->assertNotEmpty($this->user->id);
+        $this->assertNotEmpty($this->users->id);
     }
 
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
+
     /** @test */
     public function freelacner_has_name()
     {
-        $this->assertNotEmpty($this->user->name);
+        $this->assertNotEmpty($this->users->name);
+    }
+
+    /** @test */
+    public function api_test()
+    {
+
+
     }
 
 }

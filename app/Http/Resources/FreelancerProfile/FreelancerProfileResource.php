@@ -21,8 +21,7 @@ class FreelancerProfileResource extends Resource
             'propicURL' => $this->propicURL,
             'skills' => $this->skills,
             'qualitifications' => $this->qualitifications,
-            'pictures' => $this->gallery,
-            'calendar' => $this->calendar
+            'pictures' => $this->gallery
 
         ];
     }
